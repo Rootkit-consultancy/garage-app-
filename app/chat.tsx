@@ -2,9 +2,9 @@ import { useLocalSearchParams, router } from "expo-router";
 import { useMemo, useState } from "react";
 import { Feather } from "@expo/vector-icons";
 import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
-import { TitleAppBar } from "./_components/AppBar";
-import { mechanics } from "./_data/mock";
-import { Colors, Radius, Shadow } from "./_theme";
+import { TitleAppBar } from "../src/ui/AppBar";
+import { mechanics } from "../src/data/mock";
+import { Colors, Radius, Shadow } from "../src/theme";
 
 type Msg = {
   id: string;

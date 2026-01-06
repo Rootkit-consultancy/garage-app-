@@ -1,10 +1,10 @@
 import { Link } from "expo-router";
 import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { Colors, Radius, Shadow } from "./_theme";
-import { HomeAppBar } from "./_components/AppBar";
-import { Badge, Card, PillButton, SectionTitle, TextButton } from "./_components/UI";
-import { mechanics, user, vehicles } from "./_data/mock";
+import { Colors, Radius, Shadow } from "../src/theme";
+import { HomeAppBar } from "../src/ui/AppBar";
+import { Badge, Card, PillButton, SectionTitle, TextButton } from "../src/ui/UI";
+import { mechanics, user, vehicles } from "../src/data/mock";
 
 export default function HomeScreen() {
   return (

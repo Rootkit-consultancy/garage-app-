@@ -1,18 +1,12 @@
 import type { ReactNode } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { Colors, Radius, Shadow } from "../_theme";
+import { Colors, Radius, Shadow } from "../theme";
 
 export function Card({ children, style }: { children: ReactNode; style?: object }) {
   return <View style={[styles.card, style]}>{children}</View>;
 }
 
-export function SectionTitle({
-  title,
-  right,
-}: {
-  title: string;
-  right?: ReactNode;
-}) {
+export function SectionTitle({ title, right }: { title: string; right?: ReactNode }) {
   return (
     <View style={styles.sectionRow}>
       <Text style={styles.sectionTitle}>{title}</Text>

@@ -2,10 +2,10 @@ import { Link, useLocalSearchParams } from "expo-router";
 import { useMemo, useState } from "react";
 import { Feather } from "@expo/vector-icons";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
-import { TitleAppBar } from "../_components/AppBar";
-import { Badge, Card } from "../_components/UI";
-import { mechanics } from "../_data/mock";
-import { Colors, Radius, Shadow } from "../_theme";
+import { TitleAppBar } from "../../src/ui/AppBar";
+import { Badge, Card } from "../../src/ui/UI";
+import { mechanics } from "../../src/data/mock";
+import { Colors, Radius, Shadow } from "../../src/theme";
 
 type Tab = "overview" | "reviews" | "photos";
 

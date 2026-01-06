@@ -2,9 +2,9 @@ import { Link, useLocalSearchParams } from "expo-router";
 import { useMemo } from "react";
 import { Feather } from "@expo/vector-icons";
 import { Pressable, StyleSheet, Text, View } from "react-native";
-import { Card } from "./_components/UI";
-import { mechanics } from "./_data/mock";
-import { Colors, Radius, Shadow } from "./_theme";
+import { Card } from "../src/ui/UI";
+import { mechanics } from "../src/data/mock";
+import { Colors, Radius, Shadow } from "../src/theme";
 
 const steps = ["Requested", "Accepted", "On the way", "Repairing", "Completed"] as const;
 

@@ -1,7 +1,7 @@
 import { router } from "expo-router";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Feather } from "@expo/vector-icons";
-import { Colors, Radius } from "../_theme";
+import { Colors, Radius } from "../theme";
 
 export function HomeAppBar({ address }: { address: string }) {
   return (

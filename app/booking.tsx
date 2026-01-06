@@ -2,10 +2,10 @@ import { Link, useLocalSearchParams, router } from "expo-router";
 import { useMemo, useState } from "react";
 import { Feather } from "@expo/vector-icons";
 import { ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
-import { TitleAppBar } from "./_components/AppBar";
-import { Card, TextButton } from "./_components/UI";
-import { mechanics, vehicles } from "./_data/mock";
-import { Colors, Radius, Shadow } from "./_theme";
+import { TitleAppBar } from "../src/ui/AppBar";
+import { Card, TextButton } from "../src/ui/UI";
+import { mechanics, vehicles } from "../src/data/mock";
+import { Colors, Radius, Shadow } from "../src/theme";
 
 type ServiceTime = "asap" | "schedule";
 
