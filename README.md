@@ -1,6 +1,6 @@
-# Garage App (UI Prototype)
+# Garage App (Expo SDK 54)
 
-This repo contains a **web UI prototype** (React + Vite) for a mechanic booking flow:
+This repo is an **Expo / React Native** project (SDK 54) implementing a mechanic booking flow:
 
 - Home / Find Mechanic
 - Mechanic Profile
@@ -8,12 +8,20 @@ This repo contains a **web UI prototype** (React + Vite) for a mechanic booking 
 - Live Tracking
 - In-app Chat
 
-## Run locally
+## Run (web)
 
 ```bash
 npm install
-npm run dev
+npx expo start --web
 ```
 
-Then open the Vite URL (typically `http://localhost:5173`).
+Open the forwarded URL from your editor’s **Ports/Preview** panel (Expo will print the port in the terminal).
+
+## Run (mobile)
+
+```bash
+npx expo start
+```
+
+Scan the QR code using **Expo Go**.
 
