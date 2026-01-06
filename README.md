@@ -1,27 +1,65 @@
-# Garage App (Expo SDK 54)
+# Garage App (React Native – non‑Expo)
 
-This repo is an **Expo / React Native** project (SDK 54) implementing a mechanic booking flow:
+Customer-side **mechanic booking** app (Uber/Ola style, but for car/bike mechanics).
 
-- Home / Find Mechanic
-- Mechanic Profile
-- Booking Details & Schedule
-- Live Tracking
-- In-app Chat
+## Stack
+- **React Native** (latest stable)
+- **TypeScript**
+- **React Navigation** (stack + bottom tabs)
+- **Redux Toolkit**
+- **Axios** (service layer)
+- **react-native-maps** (map + markers)
+- **react-native-permissions** + **react-native-geolocation-service** (location permissions + GPS)
 
-## Run (web)
+## Setup
 
 ```bash
 npm install
-npx expo start --web
 ```
 
-Open the forwarded URL from your editor’s **Ports/Preview** panel (Expo will print the port in the terminal).
-
-## Run (mobile)
+### iOS
 
 ```bash
-npx expo start
+cd ios
+pod install
+cd ..
 ```
 
-Scan the QR code using **Expo Go**.
+Then:
+
+```bash
+npx react-native run-ios
+```
+
+### Android
+
+```bash
+npx react-native run-android
+```
+
+## Notes
+
+### Map API key (Android)
+`react-native-maps` on Android typically requires a Google Maps API key to display tiles.
+Add this inside `<application>` in `android/app/src/main/AndroidManifest.xml`:
+
+```xml
+<meta-data
+  android:name="com.google.android.geo.API_KEY"
+  android:value="YOUR_GOOGLE_MAPS_API_KEY" />
+```
+
+The app will still **build and run** without it, but the map may render blank.
+
+### Demo login
+- **Email**: `user@garage.app`
+- **Password**: `Password123!`
+
+## App Structure
+`src/`
+- `screens/` (`auth`, `home`, `booking`, `chat`, `profile`)
+- `navigation/`
+- `store/` (Redux slices + typed hooks)
+- `services/` (axios + mocked auth)
+- `types/`, `utils/`, `theme/`
 
