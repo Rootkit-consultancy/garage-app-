@@ -1,65 +1,30 @@
-# Garage App (React Native – non‑Expo)
+# Garage App (Expo – JavaScript)
 
-Customer-side **mechanic booking** app (Uber/Ola style, but for car/bike mechanics).
+Mechanic booking app with **user + mechanic** flows (onboarding/auth, map + nearby mechanics, booking flow, live tracking/status, chat, profile).
 
-## Stack
-- **React Native** (latest stable)
-- **TypeScript**
-- **React Navigation** (stack + bottom tabs)
-- **Redux Toolkit**
-- **Axios** (service layer)
-- **react-native-maps** (map + markers)
-- **react-native-permissions** + **react-native-geolocation-service** (location permissions + GPS)
-
-## Setup
+## Run (Expo Go preview)
 
 ```bash
 npm install
+npx expo start --tunnel
 ```
 
-### iOS
+Then scan the QR code with:
+- iOS: Camera app → open in Expo Go
+- Android: Expo Go → Scan QR Code
 
-```bash
-cd ios
-pod install
-cd ..
-```
+## Tech
+- Expo SDK 54 (iOS + Android)
+- React Navigation (stack + tabs)
+- Redux Toolkit
+- Axios
+- Expo Location + react-native-maps (native; web shows a placeholder)
 
-Then:
-
-```bash
-npx react-native run-ios
-```
-
-### Android
-
-```bash
-npx react-native run-android
-```
-
-## Notes
-
-### Map API key (Android)
-`react-native-maps` on Android typically requires a Google Maps API key to display tiles.
-Add this inside `<application>` in `android/app/src/main/AndroidManifest.xml`:
-
-```xml
-<meta-data
-  android:name="com.google.android.geo.API_KEY"
-  android:value="YOUR_GOOGLE_MAPS_API_KEY" />
-```
-
-The app will still **build and run** without it, but the map may render blank.
-
-### Demo login
-- **Email**: `user@garage.app`
-- **Password**: `Password123!`
-
-## App Structure
-`src/`
-- `screens/` (`auth`, `home`, `booking`, `chat`, `profile`)
-- `navigation/`
-- `store/` (Redux slices + typed hooks)
-- `services/` (axios + mocked auth)
-- `types/`, `utils/`, `theme/`
+## Project structure
+- `App.js`: app entry
+- `src/navigation/`: navigators (auth flow + role-based tabs)
+- `src/screens/`: `auth/`, `user/`, `mechanic/`, `shared/`
+- `src/store/`: Redux slices + store
+- `src/components/`: Button/Card/Chip/Map
+- `src/constants/theme.js`: shared design tokens
 
